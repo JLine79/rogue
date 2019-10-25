@@ -1,0 +1,206 @@
+/***** BASE STYLES *****/
+/***** font-family: 'Montserrat', sans-serif; 'Oleo Script', cursive; *****/
+@font-face {
+  src:url(../fonts/wisdom-script.otf);
+  font-family: wisdomscript;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.row::after {
+  content:"";
+  clear:both;
+  display:table;
+}
+
+[class*="col-"]{
+  float:left;
+}
+
+/*** For mobile phones ***/
+
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+/*** For tablets: ***/
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+/*** For desktop: ***/
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+body{
+  font-family:'Montserrat', sans-serif;
+  color: #000000;
+  line-height: 25px;
+  margin: 20px;
+}
+
+background{
+  color: #ffffff;
+}
+
+.greentext{
+  color: #77a466;
+}
+
+.Rogue_Pickings {
+  font-size: 30px;
+  float:left;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.767;
+  vertical-align: top;
+}
+
+#about, #menu, #reviews, #content {
+  height:auto;
+}
+
+ul.topnav {
+  float:right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  color: #77a466;
+  display: block;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  line-height: 1.643;
+  text-transform: uppercase;
+  padding: 15px 15px 15px 5px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+
+#header-image{
+  background-image: url('../img/background-image.png');
+  background-size: 100% 100%;
+  height:287px;
+  clear:both;
+}
+
+h2{
+  color: #77a466;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.278;
+}
+
+#about p{
+  font-size: 16px;
+  line-height: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+#menu{
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-color: #eeeeee;
+}
+}
+
+#menu h3{
+  font-size: 12px;
+  padding-top: 25px;
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+
+#menu ul{
+  padding-left: 5px;
+  list-style: none;
+  line-height: 30px;
+}
+
+#menu ul li{
+  color: #77a466;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+#reviews{
+  border-left: solid #eeeeee;
+  border-right: solid #eeeeee;
+}
+}
+
+#reviews h3{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#reviews p{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#contact h3{
+  padding-left: 25px;
+}
+
+#contact p{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+footer {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.438;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.fresh{
+  font-family: "wisdomscript";
+  font-size: 16px;
+  color: #77a466;
+  text-transform: none;
+}
