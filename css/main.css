@@ -1,5 +1,4 @@
-/***** BASE STYLES *****/
-/***** font-family: 'Montserrat', sans-serif; 'Oleo Script', cursive; *****/
+/** font-family: 'Montserrat', sans-serif; 'Oleo Script', cursive; **/
 @font-face {
   src:url(../fonts/wisdom-script.otf);
   font-family: wisdomscript;
@@ -19,14 +18,14 @@
   float:left;
 }
 
-/*** For mobile phones ***/
+/** For mobile phones **/
 
 [class*="col-"] {
   width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
-/*** For tablets: ***/
+@media only screen and (min-width: 600px) {
+/** For tablets: **/
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
   .col-s-3 {width: 25%;}
@@ -41,8 +40,8 @@
   .col-s-12 {width: 100%;}
 }
 
-@media only screen and (min-width: 768px) {
-/*** For desktop: ***/
+@media only screen and (min-width: 850px) {
+/** For desktop: **/
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
   .col-3 {width: 25%;}
@@ -56,6 +55,8 @@
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 }
+
+/** BASE STYLES **/
 
 body{
   font-family:'Montserrat', sans-serif;
@@ -86,37 +87,12 @@ background{
   height:auto;
 }
 
-ul.topnav {
-  float:right;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-ul.topnav li {float: left;}
-
-ul.topnav li a {
-  color: #77a466;
-  display: block;
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  line-height: 1.643;
-  text-transform: uppercase;
-  padding: 15px 15px 15px 5px;
-  text-decoration: none;
-}
-
-@media screen and (max-width: 600px) {
-  ul.topnav li.right,
-  ul.topnav li {float: none;}
-}
+/** HEADER **/
 
 #header-image{
   background-image: url('../img/background-image.png');
   background-size: 100% 100%;
-  height:287px;
+  height:100px;
   clear:both;
 }
 
@@ -129,17 +105,96 @@ h2{
   line-height: 1.278;
 }
 
+/** Header: Tablets **/
+
+@media only screen and (min-width: 600px){
+  #header-image{
+    background-image: url('../img/background-image.png');
+    background-size: 100% 100%;
+    height:287px;
+    clear:both;
+  }
+}
+
+/** HEADER: Desktops **/
+
+@media only screen and (min-width: 850px) {
+  #header-image{
+    background-image: url('../img/background-image.png');
+    background-size: 100% 100%;
+    height:287px;
+    clear:both;
+  }
+}
+
+/** NAVIGATION **/
+
+.navbar nav ul{
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.navbar nav ul li a{
+  color: #77a466;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  line-height: 1.643;
+  text-transform: uppercase;
+  padding: 15px 15px 15px 5px;
+  text-decoration: none;
+}
+
+/** NAVIGATION: Tablets **/
+
+@media only screen and (min-width: 600px){
+  .navbar nav ul{
+    float: none;
+    padding-left: 0px;
+  }
+
+  .navbar nav ul li{
+    display: inline-block;
+  }
+
+  .navbar nav ul li a{
+    padding: 15px 15px 15px 5px;
+  }
+}
+
+/** NAVIGATION: Desktops **/
+
+@media only screen and (min-width: 850px){
+  .navbar nav{
+    text-align: center;
+  }
+
+  .navbar nav ul{
+    float: right;
+    padding-left: 0px;
+  }
+
+  .navbar nav ul li{
+    display: inline-block;
+  }
+
+  .navbar nav ul li a{
+    padding: 15px 15px 15px 15px;
+  }
+}
+
 #about p{
   font-size: 16px;
   line-height: 25px;
 }
 
-@media only screen and (min-width: 768px) {
-#menu{
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-color: #eeeeee;
-}
+/** Borders for Desktop only **/
+@media only screen and (min-width: 850px) {
+  #menu{
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #eeeeee;
+  }
 }
 
 #menu h3{
@@ -160,31 +215,34 @@ h2{
   font-size: 16px;
 }
 
-@media only screen and (min-width: 768px) {
-#reviews{
-  border-left: solid #eeeeee;
-  border-right: solid #eeeeee;
-}
+/** Borders & padding for Desktop only **/
+@media only screen and (min-width: 850px) {
+  #reviews{
+    border-left: solid #eeeeee;
+    border-right: solid #eeeeee;
+  }
+
+  #reviews h3{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  #reviews p{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  #contact h3{
+    padding-left: 25px;
+  }
+
+  #contact p{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
-#reviews h3{
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-#reviews p{
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-#contact h3{
-  padding-left: 25px;
-}
-
-#contact p{
-  padding-left: 25px;
-  padding-right: 25px;
-}
+/** FOOTER **/
 
 footer {
   font-size: 16px;
